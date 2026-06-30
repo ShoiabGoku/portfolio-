@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#050816" />
+<title>Shoiab Akhtar — Aerospace Engineer · Hypersonics &amp; CFD · IIT Bombay</title>
+<meta name="description" content="Shoiab Akhtar — M.Tech Aerospace Engineering, IIT Bombay. Hypersonic aerodynamics, high-speed aerothermodynamics, heat transfer and CFD. Building the future of hypersonic flight." />
+<meta name="author" content="Shoiab Akhtar" />
+<meta name="keywords" content="Shoiab Akhtar, aerospace engineer, hypersonics, aerothermodynamics, CFD, heat transfer, shock waves, IIT Bombay, ANSYS Fluent, scientific computing" />
+<link rel="canonical" href="https://shoiabgoku.github.io/portfolio/" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shoiab Akhtar — Aerospace Engineer · Hypersonics &amp; CFD" />
+<meta property="og:description" content="M.Tech Aerospace Engineering, IIT Bombay. Hypersonics, aerothermodynamics, heat transfer & CFD research." />
+<meta property="og:url" content="https://shoiabgoku.github.io/portfolio/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050816'/%3E%3Cpath d='M16 5l9 22-9-6-9 6z' fill='none' stroke='%2338BDF8' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<!-- Premium fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Person","name":"Shoiab Akhtar",
+  "jobTitle":"Aerospace Engineer / Researcher",
+  "affiliation":{"@type":"CollegeOrUniversity","name":"Indian Institute of Technology Bombay"},
+  "knowsAbout":["Hypersonic Aerodynamics","Aerothermodynamics","Heat Transfer","Computational Fluid Dynamics","Shock Waves","Scientific Computing"],
+  "email":"mailto:shoiabakhtar909@gmail.com","url":"https://github.com/ShoiabGoku"
+}
+</script>
+</head>
+<body>
+
+<!-- ============================ PRELOADER ============================ -->
+<div id="preloader">
+  <div class="pre-core">
+    <div class="pre-ring">
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="rgba(148,163,184,.15)"/><circle cx="32" cy="32" r="28" stroke="#38BDF8" stroke-dasharray="44 132" stroke-linecap="round"/></svg>
+    </div>
+    <div class="pre-txt">Initializing flight deck</div>
+  </div>
+</div>
+
+<div class="bg-field"></div>
+<canvas id="bg-canvas"></canvas>
+<div id="glow"></div>
+<div id="progress"></div>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="container nav-in">
+    <a class="brand" href="#top" aria-label="Shoiab Akhtar — home">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linejoin="round"><path d="M12 3l7 17-7-5-7 5z"/></svg></span>
+      <span class="bt">Shoiab Akhtar<small>Aerospace · Hypersonics</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#thesis">Thesis</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="btn btn-primary nav-cta">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero section" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="tag reveal"><span class="pulse"></span> Open to research roles &amp; PhD positions · 2026</span>
+      <h1 class="reveal d1">Hi, I'm <span class="grad">Shoiab</span><span class="l2">building hypersonic flight.</span></h1>
+      <div class="hero-sub reveal d2">M.Tech Aerospace Engineering &nbsp;|&nbsp; IIT Bombay</div>
+      <div class="hero-typed reveal d2"><span id="typed"></span><span class="cur">▌</span></div>
+      <p class="intro reveal d3">I work at the edge of flight — <strong>hypersonic aerodynamics</strong>, <strong>aerothermodynamics</strong> and <strong>heat transfer</strong> — using CFD, shock-tunnel experiments and scientific computing to model the physics that keeps vehicles alive at Mach 5 and beyond.</p>
+      <div class="hero-cta reveal d4">
+        <a class="btn btn-primary magnetic" href="#research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>View Research</a>
+        <a class="btn btn-ghost magnetic" href="#projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg>Projects</a>
+        <a class="btn btn-ghost magnetic" href="assets/resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>Résumé</a>
+        <a class="btn btn-ghost magnetic" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>Contact</a>
+      </div>
+      <div class="hero-foci reveal d5">
+        <span class="foci-chip">Hypersonics</span><span class="foci-chip">Aerothermodynamics</span>
+        <span class="foci-chip">Heat Transfer</span><span class="foci-chip">CFD</span>
+        <span class="foci-chip">Shock Tunnels</span><span class="foci-chip">ML for Aerospace</span>
+      </div>
+    </div>
+
+    <!-- capsule viewport -->
+    <div class="hero-view reveal d3" aria-hidden="true">
+      <canvas id="capsule"></canvas>
+      <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+      <span class="hud-tag hud-tl">● RE-ENTRY SIM</span>
+      <span class="hud-tag hud-tr">M 7.8</span>
+      <span class="hud-tag hud-bl">q · STAGNATION</span>
+      <span class="hud-tag hud-br">T₀ 5400 K</span>
+      <div class="scroll-cue"><span>scroll</span><span class="bar"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MARQUEE ============================ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span><b>HYPERSONIC AERODYNAMICS</b> <i>/</i> AEROTHERMODYNAMICS <i>/</i> <b>HEAT TRANSFER</b> <i>/</i> SHOCK WAVES <i>/</i> <b>CFD</b> <i>/</i> GAS DYNAMICS <i>/</i> <b>SHOCK TUNNELS</b> <i>/</i> SCIENTIFIC COMPUTING <i>/</i> <b>ML FOR AEROSPACE</b> <i>/</i> ENGINEERING DESIGN <i>/</i> </span>
+    <span><b>HYPERSONIC AERODYNAMICS</b> <i>/</i> AEROTHERMODYNAMICS <i>/</i> <b>HEAT TRANSFER</b> <i>/</i> SHOCK WAVES <i>/</i> <b>CFD</b> <i>/</i> GAS DYNAMICS <i>/</i> <b>SHOCK TUNNELS</b> <i>/</i> SCIENTIFIC COMPUTING <i>/</i> <b>ML FOR AEROSPACE</b> <i>/</i> ENGINEERING DESIGN <i>/</i> </span>
+  </div>
+</div>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <span class="eyebrow">// 01 — About</span>
+        <h2 class="h-sec">The engineer behind the <span class="grad">shock layer</span>.</h2>
+        <p>I'm an <strong>M.Tech Aerospace Engineering</strong> student at <strong>IIT Bombay</strong>, focused on the regime where flight gets violent: hypersonic speeds, where the air ahead of a vehicle is crushed into a shock layer hot enough to glow, dissociate and chemically react.</p>
+        <p>My pull toward aerospace started with a simple question — <em>how does anything survive re-entry?</em> Chasing that answer led me into <strong>aerothermodynamics and heat transfer</strong>, into ANSYS Fluent and shock-tunnel data, and into writing my own scientific-computing tools when the off-the-shelf ones fell short.</p>
+        <p>Today my research interests span <strong>hypersonic aerodynamics, high-speed aerothermodynamics, CFD, shock waves, gas dynamics</strong> and <strong>machine learning for aerospace</strong> — and I build engineering software and AI research assistants to make that work faster and more reliable.</p>
+        <div class="vision">
+          <div class="vl">Long-term vision</div>
+          <p>To contribute to the design of next-generation hypersonic and re-entry vehicles — at organisations like ISRO, DRDO, NASA, SpaceX or Blue Origin — and to advance the science of aerothermal prediction through research that is rigorous, reproducible and useful.</p>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <div class="glass" style="padding:24px 24px 8px;">
+          <span class="eyebrow">// Trajectory</span>
+          <div class="tl" style="margin-top:10px;">
+            <div class="tl-item"><div class="when">Present</div><h4>M.Tech — Aerospace Engineering</h4><div class="org">IIT Bombay · Hypersonic aerothermodynamics</div><p>Master's thesis on analytical heat-transfer estimation for hypersonic vehicles; CFD &amp; high-speed flow research.</p></div>
+            <div class="tl-item"><div class="when">Research</div><h4>Hypersonics &amp; Shock-Tunnel Work</h4><div class="org">CFD · gas dynamics · experimental methods</div><p>Simulation and experimental study of high-enthalpy flows, shock structure and surface heating.</p></div>
+            <div class="tl-item"><div class="when">Build</div><h4>Engineering Software &amp; AI Tools</h4><div class="org">AeroMind · aerothermo calculators · automation</div><p>Self-built, verified tools for compressible-flow analysis and research productivity.</p></div>
+            <div class="tl-item"><div class="when">Foundation</div><h4>B.Tech — Engineering</h4><div class="org placeholder">— add undergraduate institution &amp; years —</div><p>Grounding in aerodynamics, thermodynamics, propulsion and structures.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SKILLS ============================ -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">// 02 — Capabilities</span>
+      <h2 class="h-sec">A research toolkit, mapped.</h2>
+      <p class="lead">Seven domains where I operate — from first-principles flow physics to the AI and software that accelerate the work. The profile shows relative depth; the cards show the tools.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="radar-wrap reveal" aria-hidden="true">
+        <svg id="radar" viewBox="0 0 420 420"></svg>
+      </div>
+      <div class="skill-cards reveal d2">
+        <article class="skill-card">
+          <div class="sc-top"><h4>CFD</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12c3-5 6 5 9 0s6-5 9 0"/><path d="M3 17c3-5 6 5 9 0s6-5 9 0"/></svg></span></div>
+          <div class="pips" data-level="5"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">ANSYS Fluent · meshing · turbulence · CFD-Post</div>
+        </article>
+        <article class="skill-card">
+          <div class="sc-top"><h4>Hypersonics</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 19l6-6m0 0l8-8m-8 8l-4-1m4 1l1 4"/><path d="M14 5c3 0 5 2 5 5"/></svg></span></div>
+          <div class="pips" data-level="5"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">shock layers · real-gas · stagnation heating</div>
+        </article>
+        <article class="skill-card">
+          <div class="sc-top"><h4>Programming</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></span></div>
+          <div class="pips" data-level="5"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">Python · C++ · MATLAB · Bash · Git</div>
+        </article>
+        <article class="skill-card">
+          <div class="sc-top"><h4>Simulation</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 18v3M16 18v3"/></svg></span></div>
+          <div class="pips" data-level="4"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">SpaceClaim · DesignModeler · pre/post</div>
+        </article>
+        <article class="skill-card">
+          <div class="sc-top"><h4>Experimental</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 3h8"/></svg></span></div>
+          <div class="pips" data-level="4"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">shock tunnels · high-enthalpy flow · DAQ</div>
+        </article>
+        <article class="skill-card">
+          <div class="sc-top"><h4>AI / ML</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span></div>
+          <div class="pips" data-level="4"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">ML for aerospace · surrogate models · AI tools</div>
+        </article>
+        <article class="skill-card" style="grid-column:1/-1;">
+          <div class="sc-top"><h4>Engineering Software &amp; Scientific Computing</h4><span class="sc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span></div>
+          <div class="pips" data-level="5"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tools">NumPy/SciPy · numerical methods · verification · full-stack tools · Linux</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROJECTS ============================ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">// 03 — Selected work</span>
+      <h2 class="h-sec">Projects &amp; research builds.</h2>
+      <p class="lead">Click any card for the full case study — objective, methodology, tools, challenges, results, lessons and future work.</p>
+    </div>
+    <div class="proj-grid" id="projGrid"><!-- cards injected by app.js --></div>
+  </div>
+</section>
+
+<!-- ============================ THESIS ============================ -->
+<section class="section" id="thesis">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow amber">// 04 — Master's Thesis</span>
+      <h2 class="h-sec">Predicting the heat of <span class="grad-thermal">hypersonic flight</span>.</h2>
+    </div>
+
+    <div class="thesis-band reveal d1">
+      <div class="thesis-top">
+        <div>
+          <div class="mono" style="font-size:12px;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;">Thesis · in progress</div>
+          <div class="thesis-title">An <em>Analytical Model</em> to Estimate Heat-Transfer Rates on <em>Hypersonic Vehicles</em></div>
+          <p style="color:var(--ink-soft);font-size:15.5px;">At hypersonic speeds the bow shock superheats the air into a chemically-reacting gas. Predicting how much of that heat reaches the surface — fast, without a full CFD campaign — is the difference between a viable thermal-protection design and a failed one. My thesis develops a fast analytical model, benchmarked against CFD across ideal-gas and real-gas (dissociating) regimes.</p>
+          <div class="thesis-meta">
+            <span class="chip">Ideal &amp; real gas</span><span class="chip">O₂ / N₂ dissociation</span>
+            <span class="chip">5-species air chemistry</span><span class="chip">ANSYS Fluent benchmark</span><span class="chip">Fay–Riddell</span>
+          </div>
+        </div>
+        <div class="thesis-diagram" aria-hidden="true">
+          <!-- blunt-body bow shock + thermal contour diagram -->
+          <svg viewBox="0 0 360 240">
+            <defs>
+              <linearGradient id="thermal" x1="0" x2="1">
+                <stop offset="0" stop-color="#38BDF8"/><stop offset="0.5" stop-color="#3B82F6"/><stop offset="1" stop-color="#FB923C"/>
+              </linearGradient>
+              <radialGradient id="hot" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#FB923C" stop-opacity="0.9"/><stop offset="1" stop-color="#FB923C" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- freestream arrows -->
+            <g stroke="#5E6E89" stroke-width="1.2" fill="none">
+              <line x1="14" y1="60" x2="58" y2="60"/><line x1="14" y1="120" x2="58" y2="120"/><line x1="14" y1="180" x2="58" y2="180"/>
+              <path d="M54 56l6 4-6 4M54 116l6 4-6 4M54 176l6 4-6 4" fill="#5E6E89"/>
+            </g>
+            <text x="14" y="44" class="radar-label" fill="#5E6E89" style="font-size:9px;">M∞ = 7.8</text>
+            <!-- bow shock (multiple thermal layers) -->
+            <path d="M120 30 Q60 120 120 210" fill="none" stroke="url(#thermal)" stroke-width="3"/>
+            <path d="M132 36 Q78 120 132 204" fill="none" stroke="#38BDF8" stroke-width="1.4" opacity="0.5"/>
+            <path d="M146 44 Q98 120 146 196" fill="none" stroke="#38BDF8" stroke-width="1" opacity="0.3"/>
+            <!-- stagnation glow -->
+            <ellipse cx="168" cy="120" rx="46" ry="60" fill="url(#hot)"/>
+            <!-- blunt body -->
+            <path d="M170 70 A60 60 0 0 1 170 170 L300 158 Q318 120 300 82 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1.6"/>
+            <circle cx="170" cy="120" r="3" fill="#FB923C"/>
+            <text x="176" y="116" class="radar-label" style="font-size:9px;" fill="#FB923C">q̇_stag</text>
+            <!-- labels -->
+            <text x="92" y="120" class="radar-label" style="font-size:9px;" fill="#38BDF8" transform="rotate(-90 92 120)">BOW SHOCK</text>
+            <text x="232" y="124" class="radar-label" style="font-size:9px;" fill="#94A3B8">VEHICLE</text>
+            <text x="150" y="226" class="radar-label" style="font-size:8.5px;" fill="#5E6E89">shock layer · dissociating air</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="thesis-steps">
+        <div class="tstep"><div class="tn">01 · Motivation</div><h4>Why it matters</h4><p>Thermal-protection mass drives hypersonic vehicle feasibility. A fast, trustworthy heat-flux estimate shortens the design loop versus running full CFD for every configuration.</p></div>
+        <div class="tstep"><div class="tn">02 · Problem</div><h4>Problem statement</h4><p>Predict stagnation and distributed surface heat-transfer rates analytically, capturing real-gas chemistry effects that ideal-gas relations miss at high enthalpy.</p></div>
+        <div class="tstep"><div class="tn">03 · Literature</div><h4>State of the art</h4><p>Building on Fay–Riddell, Sutton–Graves and boundary-layer theory; reviewing where classical correlations diverge from reacting-flow CFD.</p></div>
+        <div class="tstep"><div class="tn">04 · Method</div><h4>Methodology</h4><p>Analytical formulation paired with a structured CFD workflow in ANSYS Fluent for benchmarking — geometry, mesh, solver, post-processing.</p></div>
+        <div class="tstep"><div class="tn">05 · Chemistry</div><h4>Gas modelling</h4><p>Ideal-gas → real-gas progression with oxygen and nitrogen dissociation and a five-species air model to capture high-temperature energy absorption.</p></div>
+        <div class="tstep"><div class="tn">06 · Contribution</div><h4>Expected outcome</h4><p>A validated, low-cost predictive model and a clear map of when real-gas effects must be included — with future work toward ML-accelerated surrogates.</p></div>
+      </div>
+    </div>
+
+    <!-- chemistry ladder -->
+    <div class="reveal d2" style="margin-top:28px;">
+      <div class="mono" style="font-size:12px;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;margin-bottom:6px;">High-temperature air chemistry</div>
+      <div class="chem-row">
+        <div class="chem"><div class="ct">O₂ ⇌ 2O</div><div class="ck">Oxygen dissociation</div><div class="ctemp">~2 500 K+</div></div>
+        <div class="chem"><div class="ct">N₂ ⇌ 2N</div><div class="ck">Nitrogen dissociation</div><div class="ctemp">~4 000 K+</div></div>
+        <div class="chem"><div class="ct">N₂ + O ⇌ NO + N</div><div class="ck">NO formation</div><div class="ctemp">exchange</div></div>
+        <div class="chem"><div class="ct">5-species</div><div class="ck">N₂, O₂, NO, N, O</div><div class="ctemp">equilibrium air</div></div>
+        <div class="chem"><div class="ct">q̇<sub>w</sub></div><div class="ck">Wall heat flux</div><div class="ctemp">model output</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESEARCH ============================ -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">// 05 — Research</span>
+      <h2 class="h-sec">Interests, current work &amp; directions.</h2>
+      <p class="lead">Where my research lives now and where I want to take it next.</p>
+    </div>
+    <div class="res-grid">
+      <article class="res-card reveal">
+        <div class="rc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h4>Research interests</h4>
+        <ul><li>Hypersonic aerodynamics &amp; aerothermodynamics</li><li>Surface heat transfer &amp; thermal protection</li><li>Shock waves &amp; high-enthalpy gas dynamics</li><li>ML / surrogate models for high-speed flow</li></ul>
+      </article>
+      <article class="res-card reveal d1">
+        <div class="rc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v8M5 10l-2 9h18l-2-9M9 10h6"/></svg></div>
+        <h4>Current work</h4>
+        <ul><li>Analytical hypersonic heat-transfer model (thesis)</li><li>Real-gas / dissociation CFD benchmarking in Fluent</li><li>Shock-tunnel data analysis &amp; reduction</li><li>Engineering-software &amp; AI research tooling</li></ul>
+      </article>
+      <article class="res-card reveal d2">
+        <div class="rc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg></div>
+        <h4>Future directions</h4>
+        <ul><li>ML-accelerated aerothermal prediction</li><li>Coupled fluid–thermal–chemistry models</li><li>Re-entry &amp; TPS design optimisation</li><li>Open, reproducible high-speed-flow tooling</li></ul>
+      </article>
+      <article class="res-card reveal">
+        <div class="rc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg></div>
+        <h4>Collaborations</h4>
+        <p>Open to collaboration with hypersonics, propulsion and thermal-science groups, and with industry R&amp;D in space-launch and defence aerospace.</p>
+        <p class="placeholder" style="margin-top:8px;">— list current collaborators / labs here —</p>
+      </article>
+      <article class="res-card reveal d1">
+        <div class="rc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h4>Publications &amp; talks</h4>
+        <p class="placeholder">— add journal / conference papers, e.g. authors, title, venue, year. Link DOIs as they appear.</p>
+        <p style="margin-top:8px;font-size:13px;color:var(--ink-mid);">Google Scholar &amp; ResearchGate linked in Contact.</p>
+      </article>
+      <article class="res-card reveal d2">
+        <div class="rc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h4>Posters &amp; presentations</h4>
+        <p class="placeholder">— add research posters and presentation decks (PDF links / thumbnails) here.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">// 06 — Experience</span>
+      <h2 class="h-sec">Roles, labs &amp; leadership.</h2>
+      <p class="lead">A timeline of research, technical and leadership roles. <span class="placeholder">Replace the placeholder details with your specific dates, organisations and outcomes.</span></p>
+    </div>
+    <div class="xp reveal d1">
+      <div class="xp-item"><div class="row"><span class="when">Present</span><span class="badge">Research</span></div><h4>Research Assistant — Hypersonics / Aerothermodynamics</h4><div class="org">IIT Bombay <span class="placeholder">· lab name</span></div><p>CFD &amp; analytical modelling of hypersonic heat transfer; high-speed flow simulation, data reduction and method development.</p></div>
+      <div class="xp-item"><div class="row"><span class="when">Ongoing</span><span class="badge">Laboratory</span></div><h4>Laboratory Work — Shock Tunnel &amp; CFD</h4><div class="org placeholder">— facility / supervisor —</div><p>Hands-on high-enthalpy experiments, instrumentation and post-processing of shock-tunnel and CFD datasets.</p></div>
+      <div class="xp-item"><div class="row"><span class="when">Dates</span><span class="badge">Technical</span></div><h4>Technical Position</h4><div class="org placeholder">— role, team / club, organisation —</div><p>— scope, responsibilities and a measurable outcome or deliverable —</p></div>
+      <div class="xp-item"><div class="row"><span class="when">Dates</span><span class="badge">Leadership</span></div><h4>Leadership Position</h4><div class="org placeholder">— council / committee / team —</div><p>— what you led, team size, and the result —</p></div>
+      <div class="xp-item"><div class="row"><span class="when">Dates</span><span class="badge">Sports Council</span></div><h4>Sports Council Role</h4><div class="org placeholder">— position &amp; institute —</div><p>— events organised, teams represented, responsibilities —</p></div>
+      <div class="xp-item"><div class="row"><span class="when">Dates</span><span class="badge">Hostel</span></div><h4>Hostel Responsibility</h4><div class="org placeholder">— role —</div><p>— responsibilities &amp; impact on hostel community —</p></div>
+      <div class="xp-item"><div class="row"><span class="when">Dates</span><span class="badge">Volunteer</span></div><h4>Volunteer Activities</h4><div class="org placeholder">— initiative / NGO / outreach —</div><p>— contribution &amp; outcome —</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ACHIEVEMENTS ============================ -->
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow amber">// 07 — Achievements</span>
+      <h2 class="h-sec">Recognition &amp; milestones.</h2>
+      <p class="lead"><span class="placeholder">Swap in your real awards, scholarships and results — the structure is ready.</span></p>
+    </div>
+    <div class="ach-grid">
+      <article class="ach reveal"><div class="an">A—01</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M8.2 13 7 22l5-3 5 3-1.2-9"/></svg></div><h4>Awards</h4><p class="placeholder">— honours &amp; recognitions —</p></article>
+      <article class="ach reveal d1"><div class="an">A—02</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 4 2 10l10 6 10-6Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><h4>Scholarships</h4><p class="placeholder">— merit / GATE / institute scholarships —</p></article>
+      <article class="ach reveal d2"><div class="an">A—03</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9V2h12v7a6 6 0 0 1-12 0ZM6 5H3v2a3 3 0 0 0 3 3M18 5h3v2a3 3 0 0 1-3 3M9 22h6M12 16v6"/></svg></div><h4>Competitions</h4><p class="placeholder">— hackathons / design / technical contests —</p></article>
+      <article class="ach reveal d3"><div class="an">A—04</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h4>Leadership</h4><p class="placeholder">— positions of responsibility —</p></article>
+      <article class="ach reveal"><div class="an">A—05</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Technical events</h4><p class="placeholder">— workshops, symposia, organising roles —</p></article>
+      <article class="ach reveal d1"><div class="an">A—06</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></div><h4>Certifications</h4><p class="placeholder">— ANSYS / CFD / ML certifications —</p></article>
+      <article class="ach reveal d2"><div class="an">A—07</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21l2.3-7.2-6-4.4h7.6Z"/></svg></div><h4>GATE / rank</h4><p class="placeholder">— exam scores / ranks —</p></article>
+      <article class="ach reveal d3"><div class="an">A—08</div><div class="ac-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div><h4>More</h4><p class="placeholder">— anything else worth highlighting —</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GALLERY ============================ -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">// 08 — Gallery</span>
+      <h2 class="h-sec">Lab, CFD &amp; campus.</h2>
+    </div>
+    <div class="gal reveal d1" id="gal"><!-- tiles injected by app.js --></div>
+    <p class="gal-note">↳ Placeholder visuals — drop your own images into <span class="mono">assets/gallery/</span> and swap the tiles. Captions are ready.</p>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <div class="contact-in">
+        <div>
+          <span class="eyebrow">// 09 — Contact</span>
+          <h2>Let's push the <span class="grad">edge of flight</span> together.</h2>
+          <p>Open to PhD &amp; research positions, aerospace R&amp;D roles, and collaborations in hypersonics, aerothermodynamics and CFD. Fastest reply is by email.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary magnetic" href="mailto:shoiabakhtar909@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>Email me</a>
+            <a class="btn btn-amber magnetic" href="assets/resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>Download Résumé</a>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a class="clink" href="mailto:shoiabakhtar909@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg></span><span><small>Email</small>shoiabakhtar909@gmail.com</span></a>
+          <a class="clink" href="https://github.com/ShoiabGoku" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></span><span><small>GitHub</small>github.com/ShoiabGoku</span></a>
+          <a class="clink" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.07 1.4-2.07 2.85V21H9z"/></svg></span><span><small>LinkedIn</small><span class="placeholder">add profile URL</span></span></a>
+          <a class="clink" href="https://scholar.google.com/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Z"/><path d="M6 13v3.5c0 1.66 2.69 3 6 3s6-1.34 6-3V13l-6 3.3L6 13Z"/></svg></span><span><small>Google Scholar</small><span class="placeholder">add profile URL</span></span></a>
+          <a class="clink" href="https://www.researchgate.net/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 2H4.4A2.4 2.4 0 0 0 2 4.4v15.2A2.4 2.4 0 0 0 4.4 22h15.2a2.4 2.4 0 0 0 2.4-2.4V4.4A2.4 2.4 0 0 0 19.6 2ZM9.5 14.2c-.8 0-1.3.4-1.6 1H7.8v-.9H6.4V18h1.5v-1.8c0-.7.3-1.1.9-1.1.5 0 .8.3.8 1V18h1.5v-2.2c0-1-.6-1.6-1.6-1.6Zm6.2-2.1a2.6 2.6 0 1 0 .02 0Z"/></svg></span><span><small>ResearchGate</small><span class="placeholder">add profile URL</span></span></a>
+          <a class="clink" href="assets/resume.pdf" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span><span><small>Résumé</small>PDF download</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="container foot">
+    <div class="meta">© <span id="year"></span> <b>Shoiab Akhtar</b> · Aerospace Engineer — Hypersonics &amp; CFD<br/>M.Tech, IIT Bombay · Designed &amp; engineered from scratch — dependency-light, no framework.</div>
+    <div class="foot-soc">
+      <a href="mailto:shoiabakhtar909@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg></a>
+      <a href="https://github.com/ShoiabGoku" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+      <a href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- project modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card">
+    <div class="modal-hero" id="modalHero"></div>
+    <button class="modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
