@@ -120,7 +120,7 @@ This repo **is** the site (no build step).
 ## 10 · Content status
 
 Done (real data from résumé + publication):
-- [x] **Résumé** — `assets/resume.pdf` wired to every "Résumé" button.
+- [x] **Résumé** — purpose-built **web résumé** at `resume.html` (dark on screen, clean black-on-white on print/Save-as-PDF, **no phone number**); every "Résumé" button links to it.
 - [x] **B.Tech** — Hindustan Institute of Technology & Science (HITS), Chennai · 2021–2025 · CGPA 8.5.
 - [x] **Experience** — IIT Gandhinagar & IIT Bhubaneswar research internships, Lab Coordinator, AICTE Bootcamp team lead.
 - [x] **Achievements** — AICTE (PM-USP) & HITS merit scholarships, academic record, certifications, olympiad.
@@ -152,10 +152,10 @@ Still to add:
 ```
 portfolio/
 ├─ index.html              # all content + structure
+├─ resume.html             # web résumé (screen + print/PDF), no phone
 ├─ assets/
 │  ├─ css/style.css        # design system + components
 │  ├─ js/app.js            # interactions, 3D capsule, radar, modals
-│  ├─ resume.pdf           # ✓ added
 │  ├─ publications/        # ✓ Elsevier chapter PDF
 │  └─ gallery/             # ← add images (SVG placeholders for now)
 ├─ .nojekyll

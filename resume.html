@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#050816" />
+<title>Shoiab Akhtar — Résumé · Aerospace Engineer (Hypersonics &amp; CFD)</title>
+<meta name="description" content="Résumé of Shoiab Akhtar — Aerospace engineer (M.Tech, IIT Bombay; B.Tech, HITS Chennai). Hypersonics, aerothermodynamics, heat transfer and CFD. Open to work." />
+<meta name="robots" content="index,follow" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050816'/%3E%3Cpath d='M16 5l9 22-9-6-9 6z' fill='none' stroke='%2338BDF8' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#050816; --paper:#0a1024; --panel:#0d1428; --line:rgba(148,163,184,.16); --line-2:rgba(148,163,184,.3);
+  --ink:#F8FAFC; --soft:#C3CEE0; --mid:#94A3B8; --dim:#63748f;
+  --blue:#3B82F6; --cyan:#38BDF8; --orange:#FB923C;
+  --display:"Space Grotesk","Segoe UI",system-ui,sans-serif;
+  --body:"Inter","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono","Consolas",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{font-family:var(--body);background:
+  radial-gradient(900px 600px at 82% -8%, rgba(59,130,246,.14), transparent 60%),
+  radial-gradient(800px 600px at 6% 4%, rgba(56,189,248,.10), transparent 58%), var(--bg);
+  color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; padding:0 20px 80px;}
+a{color:inherit;text-decoration:none;}
+::selection{background:rgba(56,189,248,.3);}
+
+/* action bar */
+.bar{position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; gap:12px;
+  max-width:960px; margin:0 auto; padding:16px 0;}
+.bar .btn{display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:13px; padding:10px 16px;
+  border-radius:10px; border:1px solid var(--line-2); color:var(--ink); background:rgba(13,20,40,.6); backdrop-filter:blur(8px); cursor:pointer; transition:.2s;}
+.bar .btn svg{width:15px;height:15px;}
+.bar .btn:hover{border-color:var(--cyan); transform:translateY(-1px);}
+.bar .btn.primary{border-color:transparent; color:#04101f; font-weight:600; background:linear-gradient(120deg,var(--cyan),var(--blue));}
+
+/* sheet */
+.sheet{max-width:960px; margin:0 auto; background:linear-gradient(180deg,var(--paper),#080e1f);
+  border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:0 40px 90px -50px rgba(0,0,0,.9);}
+.head{padding:40px clamp(28px,5vw,52px) 30px; border-bottom:1px solid var(--line);
+  background:linear-gradient(160deg, rgba(56,189,248,.08), transparent 70%); position:relative;}
+.head .name{font-family:var(--display); font-weight:700; font-size:clamp(30px,5vw,46px); letter-spacing:-.02em; line-height:1;}
+.head .role{font-family:var(--mono); color:var(--cyan); font-size:clamp(12px,1.6vw,15px); letter-spacing:.05em; margin-top:12px;}
+.head .contact{display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:18px; font-family:var(--mono); font-size:12.5px; color:var(--soft);}
+.head .contact a, .head .contact span{display:inline-flex; align-items:center; gap:7px;}
+.head .contact svg{width:14px; height:14px; color:var(--cyan);}
+.head .open{position:absolute; top:24px; right:clamp(20px,4vw,40px); display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.05em; color:var(--soft); border:1px solid var(--line); border-radius:100px; padding:6px 13px; background:rgba(5,8,22,.5);}
+.head .open .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(56,189,248,.18);}
+
+.grid{display:grid; grid-template-columns:1.7fr 1fr; gap:0;}
+.main{padding:30px clamp(28px,5vw,52px); border-right:1px solid var(--line);}
+.aside{padding:30px clamp(24px,4vw,34px); background:rgba(6,10,24,.4);}
+
+.sec{margin-bottom:26px;}
+.sec:last-child{margin-bottom:0;}
+.sec-h{font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--cyan);
+  display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+.sec-h::after{content:""; flex:1; height:1px; background:linear-gradient(90deg,var(--line-2),transparent);}
+.summary{color:var(--soft); font-size:14.5px;}
+
+.item{position:relative; padding-left:16px; margin-bottom:16px;}
+.item:last-child{margin-bottom:0;}
+.item::before{content:""; position:absolute; left:0; top:6px; width:7px; height:7px; border-radius:2px; background:var(--cyan);}
+.item .t{font-family:var(--display); font-weight:600; font-size:15.5px; line-height:1.25;}
+.item .m{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px; margin-top:2px;}
+.item .org{color:var(--mid); font-size:13px;}
+.item .when{font-family:var(--mono); font-size:11px; color:var(--cyan); letter-spacing:.04em; white-space:nowrap;}
+.item p{color:var(--soft); font-size:13.5px; margin-top:6px;}
+.item .doi{font-family:var(--mono); font-size:11.5px; color:var(--cyan); margin-top:6px; display:inline-flex; align-items:center; gap:6px; word-break:break-all;}
+
+.pub{border:1px solid var(--line); border-radius:12px; padding:16px 16px; background:rgba(56,189,248,.05);}
+.pub .badge{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--orange);
+  border:1px solid rgba(251,146,60,.4); border-radius:100px; padding:3px 9px; display:inline-block; margin-bottom:10px;}
+.pub .t{font-family:var(--display); font-weight:600; font-size:15px; line-height:1.3;}
+.pub .auth{color:var(--mid); font-size:12.5px; margin-top:6px;}
+.pub .auth b{color:var(--cyan); font-weight:600;}
+
+/* aside blocks */
+.edu .item{margin-bottom:14px;}
+.skillcat{margin-bottom:14px;}
+.skillcat .k{font-family:var(--mono); font-size:11px; color:var(--mid); text-transform:uppercase; letter-spacing:.08em; margin-bottom:7px;}
+.tags{display:flex; flex-wrap:wrap; gap:6px;}
+.tag{font-family:var(--mono); font-size:11px; color:var(--soft); border:1px solid var(--line); border-radius:7px; padding:4px 8px; background:rgba(13,20,40,.5);}
+.list{display:flex; flex-direction:column; gap:8px;}
+.list .li{color:var(--soft); font-size:13px; padding-left:15px; position:relative;}
+.list .li::before{content:"▹"; position:absolute; left:0; color:var(--cyan);}
+.list .li b{color:var(--ink); font-weight:600;}
+.langs{display:flex; flex-direction:column; gap:8px;}
+.lang{display:flex; justify-content:space-between; font-size:13px;}
+.lang .lv{font-family:var(--mono); font-size:11px; color:var(--mid);}
+
+.foot{max-width:960px; margin:18px auto 0; text-align:center; font-family:var(--mono); font-size:11px; color:var(--dim);}
+
+@media (max-width:720px){
+  .grid{grid-template-columns:1fr;}
+  .main{border-right:0; border-bottom:1px solid var(--line);}
+  .head .open{position:static; display:inline-flex; margin-top:14px;}
+}
+
+/* ---------------- PRINT: clean A4, black-on-white, no chrome ---------------- */
+@media print{
+  @page{size:A4; margin:12mm;}
+  body{background:#fff !important; color:#111 !important; padding:0;}
+  .bar, .foot{display:none !important;}
+  .sheet{max-width:none; margin:0; border:0; border-radius:0; box-shadow:none; background:#fff !important;}
+  .head{background:#fff !important; border-bottom:1.5px solid #111; padding:0 0 12px;}
+  .head .name{color:#0b1e40;}
+  .head .role{color:#1e5fbf;}
+  .head .contact{color:#333;} .head .contact svg{color:#1e5fbf;}
+  .head .open{border-color:#bbb; color:#333;} .head .open .dot{background:#1e5fbf; box-shadow:none;}
+  .grid{grid-template-columns:1.7fr 1fr; gap:0;}
+  .main{border-right:1px solid #ddd; padding:14px 16px 0 0;}
+  .aside{background:#fff !important; padding:14px 0 0 16px;}
+  .sec-h{color:#1e5fbf;} .sec-h::after{background:#ddd;}
+  .summary, .item p, .item .org, .list .li, .lang, .tag{color:#333 !important;}
+  .item .t, .pub .t, .list .li b, .lang{color:#111 !important;}
+  .item .when, .item .doi, .item::before, .skillcat .k{color:#1e5fbf !important;}
+  .item::before{background:#1e5fbf !important;}
+  .pub{background:#f4f8ff !important; border-color:#cdddf5;}
+  .pub .badge{color:#b45309; border-color:#e6c07a;}
+  .pub .auth b{color:#1e5fbf !important;}
+  .tag{border-color:#ccc; background:#f6f8fc !important;}
+  .item, .pub, .skillcat, .sec{break-inside:avoid; page-break-inside:avoid;}
+  a{color:#111 !important;}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back to portfolio</a>
+  <button class="btn primary" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>Save as PDF / Print</button>
+</div>
+
+<main class="sheet">
+  <header class="head">
+    <div class="open"><span class="dot"></span> Open to work</div>
+    <div class="name">Shoiab Akhtar</div>
+    <div class="role">Aerospace Engineer — Hypersonics · Aerothermodynamics · CFD</div>
+    <div class="contact">
+      <a href="mailto:shoiabakhtar909@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>shoiabakhtar909@gmail.com</a>
+      <a href="https://github.com/ShoiabGoku" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>github.com/ShoiabGoku</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.07 1.4-2.07 2.85V21H9z"/></svg>LinkedIn: Shoiab Akhtar</a>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Mumbai, India · IIT Bombay</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- MAIN -->
+    <section class="main">
+      <div class="sec">
+        <div class="sec-h">Profile</div>
+        <p class="summary">Aerospace engineer (M.Tech, IIT Bombay; B.Tech, HITS Chennai) specialising in <b style="color:var(--ink)">hypersonic aerodynamics, aerothermodynamics, heat transfer and CFD</b>. First-author Elsevier publication, hands-on shock- and wind-tunnel plus CFD experience, and a track record of building research-grade engineering software. Strong in ANSYS Fluent, CAD/FEA and scientific computing. <b style="color:var(--ink)">Open to aerospace engineering, R&amp;D and simulation roles.</b></p>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Experience</div>
+        <div class="item">
+          <div class="t">Postgraduate Researcher — Hypersonic Aerothermodynamics</div>
+          <div class="m"><span class="org">M.Tech, IIT Bombay</span><span class="when">Present</span></div>
+          <p>CFD and analytical modelling of hypersonic surface heat transfer; real-gas benchmarking in ANSYS Fluent and method development for the Master's thesis.</p>
+        </div>
+        <div class="item">
+          <div class="t">R&amp;D Research Intern</div>
+          <div class="m"><span class="org">IIT Gandhinagar · assistant to PhD scholar</span><span class="when">B.Tech</span></div>
+          <p>Developed a metal surface to enhance drop-wise condensation for desalination plants through fabrication and experiments — successfully increased drop-wise condensation under controlled conditions.</p>
+        </div>
+        <div class="item">
+          <div class="t">Research Intern — Fluid Dynamics &amp; Computation</div>
+          <div class="m"><span class="org">IIT Bhubaneswar · independent role</span><span class="when">B.Tech</span></div>
+          <p>Designed a wind-tunnel test-section mounting system for aerofoil and cylindrical models that reduces edge-vortex drag, with externally adjustable angle of attack — successfully built and validated.</p>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Publication</div>
+        <div class="pub">
+          <span class="badge">First author · Elsevier · 2026</span>
+          <div class="t">Banana fiber reinforced polymer composites for industrial and tribological applications</div>
+          <div class="auth"><b>S. Akhtar</b>, N. Prakash, M.M. Aswin, <em>et al.</em> — in <em>Banana Fibres and Their Composites</em>, Ch. 16, Elsevier Ltd.</div>
+          <a class="doi" href="https://doi.org/10.1016/B978-0-443-30237-4.00019-3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11.5px;color:var(--cyan);margin-top:8px;"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>doi.org/10.1016/B978-0-443-30237-4.00019-3</a>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Selected projects</div>
+        <div class="item"><div class="t">Analytical Hypersonic Heat-Transfer Model</div><div class="m"><span class="org">M.Tech thesis · analytical + real-gas CFD</span></div><p>Fast surface heat-flux prediction validated against ideal- and real-gas (dissociating) CFD.</p></div>
+        <div class="item"><div class="t">Compressible &amp; Hypersonic Aerodynamics Calculator</div><div class="m"><span class="org">Verified web tool · JavaScript / Python</span></div><p>Isentropic, shocks, cone flow, real-gas equilibrium, shock-tube &amp; atmosphere — verified 1:1 against textbook values.</p></div>
+        <div class="item"><div class="t">AeroMind — AI Engineering Assistant</div><div class="m"><span class="org">Python · FastAPI · React · SQLCipher</span></div><p>Local-first aerospace command-center: CFD run monitoring, encrypted store, model-agnostic AI layer.</p></div>
+        <div class="item"><div class="t">Gulfstream G650 Design Study · Fuel Injector · Model Rocket</div><div class="m"><span class="org">B.Tech · SolidWorks / fabrication</span></div><p>Aircraft-design study of the G650; high-compression fuel injector (SolidWorks); a stable model rocket built in 14 days.</p></div>
+      </div>
+    </section>
+
+    <!-- ASIDE -->
+    <aside class="aside">
+      <div class="sec edu">
+        <div class="sec-h">Education</div>
+        <div class="item"><div class="t">M.Tech — Aerospace Engineering</div><div class="m"><span class="org">IIT Bombay</span></div><p style="margin-top:3px;">Hypersonic aerothermodynamics · thesis.</p></div>
+        <div class="item"><div class="t">B.Tech — Aerospace Engineering</div><div class="m"><span class="org">HITS, Chennai</span><span class="when">2021–25</span></div><p style="margin-top:3px;">CGPA 8.5 · SIMCRASH Centre.</p></div>
+        <div class="item"><div class="t">Class XII — CBSE</div><div class="m"><span class="org">Model Academy, Jammu</span><span class="when">2020</span></div><p style="margin-top:3px;">CGPA 9.1.</p></div>
+        <div class="item"><div class="t">Class X — J&amp;K Board</div><div class="m"><span class="org">Imamiya Mission School, Ladakh</span><span class="when">2018</span></div><p style="margin-top:3px;">CGPA 9.0.</p></div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Skills</div>
+        <div class="skillcat"><div class="k">CFD &amp; Simulation</div><div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">LS-DYNA</span><span class="tag">Meshing</span><span class="tag">CFD-Post</span></div></div>
+        <div class="skillcat"><div class="k">CAD / Design</div><div class="tags"><span class="tag">SolidWorks</span><span class="tag">AutoCAD</span><span class="tag">SpaceClaim</span><span class="tag">DesignModeler</span></div></div>
+        <div class="skillcat"><div class="k">Programming</div><div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">MATLAB</span><span class="tag">Arduino</span><span class="tag">Git</span><span class="tag">Linux</span></div></div>
+        <div class="skillcat"><div class="k">Domains</div><div class="tags"><span class="tag">Hypersonics</span><span class="tag">Aerothermo</span><span class="tag">Heat transfer</span><span class="tag">Gas dynamics</span><span class="tag">Structural analysis</span></div></div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Achievements</div>
+        <div class="list">
+          <div class="li"><b>AICTE Scholarship</b> (PM-USP) — academic excellence</div>
+          <div class="li"><b>HITS Merit Scholarship</b> — academic excellence</div>
+          <div class="li">First-author <b>Elsevier</b> book chapter (2026)</div>
+          <div class="li">Academic record: <b>8.5 / 9.1 / 9.0</b></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Certifications</div>
+        <div class="list">
+          <div class="li">Aircraft Crash Investigation</div>
+          <div class="li">Innovation, Design &amp; Entrepreneurship Bootcamp (2024)</div>
+          <div class="li">Diploma in Computer Applications (2020)</div>
+          <div class="li">Physics · Maths · Chemistry Olympiad (Precise Energy)</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Leadership</div>
+        <div class="list">
+          <div class="li"><b>Team Lead</b> — AICTE Bootcamp (2023)</div>
+          <div class="li"><b>Lab Coordinator</b> — Academic Labs, HITS</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="sec-h">Languages</div>
+        <div class="langs">
+          <div class="lang"><span>English</span><span class="lv">Fluent</span></div>
+          <div class="lang"><span>Hindi</span><span class="lv">Fluent</span></div>
+          <div class="lang"><span>Ladakhi</span><span class="lv">Fluent</span></div>
+          <div class="lang"><span>Urdu</span><span class="lv">Fluent</span></div>
+          <div class="lang"><span>Arabic</span><span class="lv">Intermediate</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<p class="foot">Tip: use “Save as PDF / Print” → destination “Save as PDF” for a clean, shareable copy. · © <span id="y"></span> Shoiab Akhtar</p>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
