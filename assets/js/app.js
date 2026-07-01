@@ -215,6 +215,24 @@
           '<g transform="translate(300,70) rotate(38)"><path d="M0 -16 C8 -8 8 8 0 18 C-8 8 -8 -8 0 -16Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.6"/>' +
           '<path d="M0 18 l-6 10 6-3 6 3z" fill="#FB923C"/></g>' +
           '<g fill="#94A3B8"><circle cx="70" cy="190" r="2"/><circle cx="150" cy="120" r="2"/><circle cx="230" cy="86" r="2"/></g>'; break;
+      case "aircraft":
+        body = '<path d="M40 128 Q120 118 300 122 L352 119 Q362 123 352 129 L300 132 Q120 140 40 132 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1.5"/>' +
+          '<path d="M172 128 L214 168 L240 168 L212 128 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.2"/>' +
+          '<path d="M300 123 L332 94 L344 96 L320 125 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.2"/>' +
+          '<path d="M56 120 q8 -5 16 0" stroke="#FB923C" stroke-width="1.4" fill="none"/>' +
+          '<g fill="#38BDF8"><circle cx="88" cy="126" r="1.6"/><circle cx="104" cy="126" r="1.6"/><circle cx="120" cy="126" r="1.6"/></g>'; break;
+      case "injector":
+        body = '<g fill="#0b1226" stroke="#94A3B8" stroke-width="1.5"><rect x="110" y="104" width="80" height="42" rx="4"/><path d="M190 108 L218 118 L218 132 L190 142 Z"/></g>' +
+          '<g stroke="url(#gt)" stroke-width="1.4" fill="none" opacity=".9"><path d="M218 125 L330 92"/><path d="M218 125 L338 125"/><path d="M218 125 L330 158"/></g>' +
+          '<g fill="#FB923C"><circle cx="300" cy="101" r="2"/><circle cx="322" cy="96" r="2"/><circle cx="312" cy="125" r="2"/><circle cx="334" cy="125" r="2"/><circle cx="300" cy="149" r="2"/><circle cx="322" cy="154" r="2"/></g>'; break;
+      case "rocket":
+        body = '<path d="M40 214 Q170 96 344 58" fill="none" stroke="url(#gt)" stroke-width="1.6" stroke-dasharray="2 6"/>' +
+          '<g transform="translate(246,112) rotate(40)">' +
+          '<path d="M0 -34 C11 -20 11 22 0 36 C-11 22 -11 -20 0 -34 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.5"/>' +
+          '<path d="M-9 20 L-22 42 L-4 30 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1"/>' +
+          '<path d="M9 20 L22 42 L4 30 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1"/>' +
+          '<circle cx="0" cy="-14" r="3.2" fill="#38BDF8"/>' +
+          '<path d="M0 36 l-7 17 7 -4 7 4 z" fill="#FB923C"/></g>'; break;
       default:
         body = '<path d="M150 40 Q100 125 150 210" fill="none" stroke="url(#gt)" stroke-width="2.4"/>';
     }
@@ -297,6 +315,51 @@
       lessons: "If you can't verify it against a reference, you can't trust it. Dependency-free ages well.",
       future: "Add transient & viscous-interaction tools; package as a teaching resource.",
       links: [{ t: "Live demo", u: "https://shoiabgoku.github.io/Aerothermodynamic-calculator/" }, { t: "Source", u: "https://github.com/ShoiabGoku/Aerothermodynamic-calculator" }]
+    },
+    {
+      tag: "B.Tech · Aircraft Design", status: "2024", live: false, cover: "aircraft",
+      title: "Gulfstream G650 Design Study",
+      summary: "A full aircraft-design project on the Gulfstream G650 business jet — configuration, geometry and performance.",
+      chips: ["Aircraft design", "SolidWorks", "Aerodynamics", "Performance"],
+      overview: "A B.Tech capstone-style design project taking the Gulfstream G650 from configuration and geometry through aerodynamic and performance characterisation — applying aircraft-design fundamentals to a real high-performance business jet.",
+      objective: "Apply weight, geometry, aerodynamic and performance methods end-to-end on a demanding, well-documented aircraft.",
+      method: ["Configuration & weight breakdown study.", "Geometry / CAD modelling of the airframe.", "Aerodynamic sizing (wing, tail, control surfaces).", "Performance estimation (range, cruise, limits)."],
+      tools: ["SolidWorks", "AutoCAD", "Aircraft-design methods"],
+      challenges: "Reconciling published manufacturer data with first-principles estimates across the flight envelope.",
+      results: "A complete design-project report on the G650 covering configuration, aerodynamics and performance.",
+      lessons: "Aircraft design is the subject that ties every other one together — aero, structures, propulsion and stability at once.",
+      future: "Extend to CFD of the wing and a trade study on winglet geometry.",
+      links: []
+    },
+    {
+      tag: "B.Tech · Propulsion", status: "2023", live: false, cover: "injector",
+      title: "High-Compression Fuel Injector",
+      summary: "Designed a high-compression fuel injector for a propulsion design project in SolidWorks.",
+      chips: ["Propulsion", "SolidWorks", "CAD", "Injector design"],
+      overview: "A propulsion-course design project: modelling a high-compression fuel injector in SolidWorks, focusing on the geometry that governs atomisation and delivery.",
+      objective: "Design an injector geometry suited to high-compression operation.",
+      method: ["Define delivery / compression requirements.", "Parametric CAD modelling in SolidWorks.", "Iterate orifice & body geometry.", "Review for manufacturability."],
+      tools: ["SolidWorks"],
+      challenges: "Balancing atomisation geometry against high-compression constraints in a compact body.",
+      results: "Successfully designed a high-compression fuel injector model in SolidWorks.",
+      lessons: "Injector geometry drives spray quality and mixing far more than intuition suggests.",
+      future: "CFD spray simulation to quantify atomisation and cone angle.",
+      links: []
+    },
+    {
+      tag: "B.Tech · Build", status: "2023", live: false, cover: "rocket",
+      title: "Conventional Model Rocket",
+      summary: "Designed and built a stable conventional model rocket end-to-end in a 14-day project.",
+      chips: ["Rocketry", "Fabrication", "Stability", "Rapid build"],
+      overview: "A hands-on rapid build: designing and fabricating a conventional model rocket from scratch within a two-week window.",
+      objective: "Design, build and prepare to fly a stable model rocket under a tight deadline.",
+      method: ["Aerodynamic & static-stability sizing (CG/CP).", "Airframe & fin fabrication.", "Assembly, finishing and checkout."],
+      tools: ["Fabrication", "Hand tools", "Stability analysis"],
+      challenges: "Holding an adequate stability margin while turning the whole build around in 14 days.",
+      results: "Successfully designed and built the model rocket within the 14-day project window.",
+      lessons: "Fast iteration plus the fundamentals of static stability get you a flyable vehicle quickly.",
+      future: "Add an altimeter payload and recover flight data.",
+      links: []
     },
     {
       tag: "Roadmap", status: "Planned", live: false, cover: "future",

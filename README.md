@@ -117,18 +117,23 @@ This repo **is** the site (no build step).
 
 ---
 
-## 10 · ✅ Fill these in (placeholders ready in the markup)
+## 10 · Content status
 
-- [ ] **Résumé** — drop `resume.pdf` into `assets/` (every "Résumé" button points to `assets/resume.pdf`).
-- [ ] **LinkedIn / Google Scholar / ResearchGate URLs** — in the Contact section.
-- [ ] **Undergraduate (B.Tech)** institution + years — About timeline.
-- [ ] **Experience** — real dates, labs, organisations, outcomes (template rows in place).
-- [ ] **Achievements** — real awards, scholarships, GATE rank, certifications.
-- [ ] **Gallery** — add images to `assets/gallery/` and swap the placeholder SVG tiles.
-- [ ] **Publications / posters** — add as they appear.
-- [ ] Confirm surname spelling ("Shoiab Akhtar") and verify thesis details.
+Done (real data from résumé + publication):
+- [x] **Résumé** — `assets/resume.pdf` wired to every "Résumé" button.
+- [x] **B.Tech** — Hindustan Institute of Technology & Science (HITS), Chennai · 2021–2025 · CGPA 8.5.
+- [x] **Experience** — IIT Gandhinagar & IIT Bhubaneswar research internships, Lab Coordinator, AICTE Bootcamp team lead.
+- [x] **Achievements** — AICTE (PM-USP) & HITS merit scholarships, academic record, certifications, olympiad.
+- [x] **Publication** — first-author Elsevier book chapter, DOI + `assets/publications/banana-fibers-composites.pdf`.
+- [x] **B.Tech projects** — Gulfstream G650 design, high-compression fuel injector, model rocket.
+- [x] **Languages** — English, Hindi, Ladakhi, Urdu, Arabic.
 
-> Nothing fabricated: career credentials are left as clearly-marked, editable placeholders so the portfolio stays truthful.
+Still to add:
+- [ ] **LinkedIn / Google Scholar / ResearchGate** exact URLs — Contact section (placeholders).
+- [ ] **Gallery** — real images into `assets/gallery/` (SVG placeholders for now).
+- [ ] **Posters / talks** — add as they appear.
+
+> Nothing fabricated: every credential above is drawn from the author's own résumé and published chapter. Remaining items are clearly-marked placeholders.
 
 ---
 
@@ -150,8 +155,9 @@ portfolio/
 ├─ assets/
 │  ├─ css/style.css        # design system + components
 │  ├─ js/app.js            # interactions, 3D capsule, radar, modals
-│  ├─ resume.pdf           # ← add this
-│  └─ gallery/             # ← add images
+│  ├─ resume.pdf           # ✓ added
+│  ├─ publications/        # ✓ Elsevier chapter PDF
+│  └─ gallery/             # ← add images (SVG placeholders for now)
 ├─ .nojekyll
 └─ README.md
 ```
