@@ -215,6 +215,17 @@
           '<g transform="translate(300,70) rotate(38)"><path d="M0 -16 C8 -8 8 8 0 18 C-8 8 -8 -8 0 -16Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.6"/>' +
           '<path d="M0 18 l-6 10 6-3 6 3z" fill="#FB923C"/></g>' +
           '<g fill="#94A3B8"><circle cx="70" cy="190" r="2"/><circle cx="150" cy="120" r="2"/><circle cx="230" cy="86" r="2"/></g>'; break;
+      case "cryo":
+        body = '<g stroke="#5E6E89" stroke-width="1.4" fill="none"><path d="M56 30 v190 M56 220 h300"/></g>' +
+          '<path d="M96 220 q64 -96 128 0" fill="none" stroke="#94A3B8" stroke-width="1.6"/>' +
+          '<path d="M330 52 q-36 40 -60 58 t-56 44 q-16 14 -24 30" fill="none" stroke="url(#g1)" stroke-width="2.2"/>' +
+          '<path d="M196 100 q-52 36 -36 96" fill="none" stroke="#38BDF8" stroke-width="1.4" stroke-dasharray="3 5" opacity=".8"/>' +
+          '<path d="M160 196 l14 18" stroke="#FB923C" stroke-width="2.2"/>' +
+          '<path d="M170 208 l6 8 -10 -1z" fill="#FB923C"/>' +
+          '<g fill="#38BDF8"><circle cx="330" cy="52" r="3"/><circle cx="196" cy="100" r="3"/><circle cx="160" cy="196" r="3"/></g>' +
+          '<text x="64" y="46" fill="#5E6E89" font-family="monospace" font-size="10">T</text>' +
+          '<text x="340" y="216" fill="#5E6E89" font-family="monospace" font-size="10">s</text>' +
+          '<text x="236" y="196" fill="#5E6E89" font-family="monospace" font-size="9">LHe 4.2 K</text>'; break;
       case "composite":
         body = '<g stroke="#94A3B8" stroke-width="1.4" fill="#0b1226">' +
           '<path d="M70 150 l130 -34 130 34 -130 34 Z"/>' +
@@ -295,6 +306,21 @@
       lessons: "Mesh independence and residual discipline decide whether a hypersonic solution is real or numerical fiction.",
       future: "Automate the meshing-to-post pipeline; integrate uncertainty quantification.",
       links: []
+    },
+    {
+      tag: "M.Tech · Cryogenics", status: "Course project", live: false, cover: "cryo",
+      title: "Modified Dual-Pressure Helium Liquefaction Cycle",
+      summary: "Redesigned a helium liquefaction cycle with dual-pressure JT staging — 64.9% less compressor power, FoM up 171%.",
+      chips: ["Cryogenics", "Helium", "Joule–Thomson", "Thermodynamics", "FoM"],
+      overview: "A cryogenic-engineering course project: modifying a single-stage helium liquefaction cycle (the working fluid behind ITER, LHC and other superconducting systems) into a dual-pressure Joule–Thomson cycle with two-stage compression — based on the design principles of Su et al. (2020).",
+      objective: "Improve liquid-helium yield economics and Figure of Merit without using turbine work — JT expansion only, no moving parts in the cold box.",
+      method: ["Staged compression 1.5 → 6 → 14.7 bar with split ratio i = 0.75 (per literature optimisation).", "Two JT valves with a 6-HEX recuperative cascade; full state-point analysis (T–s diagram, states 1–10).", "Computed stage works (8.17 + 23.45 kW), yield and FoM from first principles (ideal work 6843 kJ/kg).", "Benchmarked against the baseline 90 kW single-stage cycle."],
+      tools: ["Thermodynamic analysis", "Helium properties", "T–s cycle design", "Python / hand calcs"],
+      challenges: "Cutting compressor work dramatically while holding liquid yield — with the no-turbine constraint ruling out the usual Claude-cycle expanders.",
+      results: "Compressor power 90 → 31.62 kW (−64.9%); FoM 0.079 → 0.214 (+171%); liquid production 30 → 28.5 L/hr (only −5%).",
+      lessons: "Where the work is done matters more than how much: smart pressure staging beats brute-force compression in cryogenic cycles.",
+      future: "Add expander-assisted variants and exergy analysis per heat exchanger.",
+      links: [{ t: "Report PDF", u: "assets/reports/dual-pressure-helium-cycle.pdf" }]
     },
     {
       tag: "Engineering Software · AI", status: "Live", live: true, cover: "ai",
