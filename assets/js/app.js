@@ -215,6 +215,16 @@
           '<g transform="translate(300,70) rotate(38)"><path d="M0 -16 C8 -8 8 8 0 18 C-8 8 -8 -8 0 -16Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.6"/>' +
           '<path d="M0 18 l-6 10 6-3 6 3z" fill="#FB923C"/></g>' +
           '<g fill="#94A3B8"><circle cx="70" cy="190" r="2"/><circle cx="150" cy="120" r="2"/><circle cx="230" cy="86" r="2"/></g>'; break;
+      case "composite":
+        body = '<g stroke="#94A3B8" stroke-width="1.4" fill="#0b1226">' +
+          '<path d="M70 150 l130 -34 130 34 -130 34 Z"/>' +
+          '<path d="M70 132 l130 -34 130 34 -130 34 Z" opacity=".85"/>' +
+          '<path d="M70 114 l130 -34 130 34 -130 34 Z" opacity=".7"/></g>' +
+          '<g stroke="url(#g1)" stroke-width="1" opacity=".65" fill="none">' +
+          '<path d="M112 103 l88 -23 88 23"/><path d="M133 108 l67 -17 67 17"/><path d="M154 114 l46 -12 46 12"/></g>' +
+          '<circle cx="200" cy="80" r="3" fill="#FB923C"/>' +
+          '<g stroke="#FB923C" stroke-width="1.6" fill="none"><path d="M200 44 v24"/><path d="M195 62 l5 8 5 -8" fill="#FB923C"/></g>' +
+          '<text x="252" y="52" fill="#5E6E89" font-family="monospace" font-size="9">LOAD</text>'; break;
       case "aircraft":
         body = '<path d="M40 128 Q120 118 300 122 L352 119 Q362 123 352 129 L300 132 Q120 140 40 132 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1.5"/>' +
           '<path d="M172 128 L214 168 L240 168 L212 128 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.2"/>' +
@@ -317,19 +327,34 @@
       links: [{ t: "Live demo", u: "https://shoiabgoku.github.io/Aerothermodynamic-calculator/" }, { t: "Source", u: "https://github.com/ShoiabGoku/Aerothermodynamic-calculator" }]
     },
     {
-      tag: "B.Tech · Aircraft Design", status: "2024", live: false, cover: "aircraft",
-      title: "Gulfstream G650 Design Study",
-      summary: "A full aircraft-design project on the Gulfstream G650 business jet — configuration, geometry and performance.",
-      chips: ["Aircraft design", "SolidWorks", "Aerodynamics", "Performance"],
-      overview: "A B.Tech capstone-style design project taking the Gulfstream G650 from configuration and geometry through aerodynamic and performance characterisation — applying aircraft-design fundamentals to a real high-performance business jet.",
-      objective: "Apply weight, geometry, aerodynamic and performance methods end-to-end on a demanding, well-documented aircraft.",
-      method: ["Configuration & weight breakdown study.", "Geometry / CAD modelling of the airframe.", "Aerodynamic sizing (wing, tail, control surfaces).", "Performance estimation (range, cruise, limits)."],
-      tools: ["SolidWorks", "AutoCAD", "Aircraft-design methods"],
-      challenges: "Reconciling published manufacturer data with first-principles estimates across the flight envelope.",
-      results: "A complete design-project report on the G650 covering configuration, aerodynamics and performance.",
-      lessons: "Aircraft design is the subject that ties every other one together — aero, structures, propulsion and stability at once.",
-      future: "Extend to CFD of the wing and a trade study on winglet geometry.",
+      tag: "B.Tech · Aero-Structural", status: "2024", live: false, cover: "aircraft",
+      title: "Gulfstream G650 — Aerodynamic & Structural Optimisation",
+      summary: "Aero-structural analysis and optimisation of the G650's wing, fuselage and landing gear in SolidWorks + ANSYS.",
+      chips: ["ANSYS", "SolidWorks", "Aerodynamics", "Structures", "Optimisation"],
+      overview: "A team design study of the Gulfstream G650 business jet: aerodynamic and structural analysis with iterative optimisation of the wing, fuselage and landing-gear configurations — SolidWorks for design refinement, ANSYS for simulation.",
+      objective: "Enhance performance, stability and structural integrity across operating conditions through iterative aero-structural optimisation.",
+      method: ["Wing: adjusted airfoil profile & sweep angle to cut drag while holding lift.", "Fuselage: improved aerodynamics and reduced weight against structural-strength constraints.", "Landing gear: improved durability and stress distribution under a range of impact loads.", "Iterated design (SolidWorks) ↔ simulation (ANSYS) to convergence."],
+      tools: ["SolidWorks", "ANSYS", "AutoCAD", "Aircraft-design methods"],
+      challenges: "Balancing drag reduction against lift and structural weight simultaneously across three coupled subsystems, and reconciling results with published G650 data.",
+      results: "Measurable improvements in drag reduction, fuel efficiency and structural resilience across multiple simulated flight conditions (team: T. Kumaran, A. Todkar, S. Haran).",
+      lessons: "Aircraft design couples everything — a wing tweak echoes through structures, stability and fuel burn. Optimisation is negotiation.",
+      future: "Full CFD of the optimised wing and a winglet-geometry trade study.",
       links: []
+    },
+    {
+      tag: "B.Tech · Materials", status: "Published", live: true, cover: "composite",
+      title: "Banana-Fiber Composite — Fabrication & Testing",
+      summary: "Fabricated and mechanically tested banana-fabric/epoxy composites — the experimental work behind my first-author Elsevier chapter.",
+      chips: ["Composites", "LY556 epoxy", "Compression moulding", "Tribology", "Elsevier"],
+      overview: "Hands-on materials research: fabricating natural banana-fabric reinforced polymer composites and characterising their mechanical & tribological behaviour — work that became Chapter 16 of Elsevier's \"Banana Fibres and Their Composites\" (first author).",
+      objective: "Develop and test an eco-friendly, lightweight, cost-effective natural-fiber composite as a sustainable alternative to synthetic materials.",
+      method: ["Laid up banana fabric with LY556 epoxy + HY951 hardener (compression moulding).", "Hot-press cure, then 24 h room-temperature cure under pressure.", "Precision-cut specimens (3 × 3 × 300 mm) for standard tests.", "Compression & pin-on-disc wear testing (ASTM G99) with worn-surface analysis."],
+      tools: ["Compression moulding", "Hot press", "Tribometer", "ASTM standards"],
+      challenges: "Achieving void-free curing and precision specimen cutting in a natural-fiber laminate — and translating lab results into a publishable, literature-grounded chapter.",
+      results: "A published first-author Elsevier book chapter (with N. Prakash, M.M. Aswin et al., supervised by M. Chandrasekar) on industrial & tribological applications of banana-fiber composites.",
+      lessons: "Materials research rewards patience — fabrication discipline upstream decides whether the data downstream means anything.",
+      future: "Hybrid natural-fiber layups and aerospace-interior applications.",
+      links: [{ t: "DOI", u: "https://doi.org/10.1016/B978-0-443-30237-4.00019-3" }, { t: "Chapter PDF", u: "assets/publications/banana-fibers-composites.pdf" }]
     },
     {
       tag: "B.Tech · Propulsion", status: "2023", live: false, cover: "injector",
