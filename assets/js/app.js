@@ -254,6 +254,31 @@
           '<path d="M9 20 L22 42 L4 30 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1"/>' +
           '<circle cx="0" cy="-14" r="3.2" fill="#38BDF8"/>' +
           '<path d="M0 36 l-7 17 7 -4 7 4 z" fill="#FB923C"/></g>'; break;
+      case "flightsim":
+        body = '<line x1="30" y1="150" x2="370" y2="118" stroke="#38BDF8" stroke-width="1.4" opacity=".5"/>' +
+          '<g transform="translate(196,120) rotate(-15)">' +
+          '<path d="M-62 0 L40 0 L64 -5 L40 6 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1.5"/>' +
+          '<path d="M-12 0 L-36 -34 L-2 -5 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.2"/>' +
+          '<path d="M-12 0 L-36 34 L-2 5 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.2"/>' +
+          '<path d="M-58 0 L-70 -15 L-50 -4 Z" fill="#0b1226" stroke="#94A3B8" stroke-width="1"/></g>' +
+          '<path d="M250 96 L320 70" stroke="#FB923C" stroke-width="1" stroke-dasharray="2 4"/>' +
+          '<circle cx="322" cy="69" r="3" fill="#FB923C"/>' +
+          '<g stroke="#38BDF8" stroke-width="1" opacity=".55"><path d="M150 175 h40 M215 165 h40"/></g>'; break;
+      case "rocketsim":
+        body = '<path d="M62 220 Q120 118 208 96 T360 68" fill="none" stroke="url(#gt)" stroke-width="2.2"/>' +
+          '<circle cx="360" cy="68" r="26" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="3 4" opacity=".6"/>' +
+          '<g transform="translate(120,150) rotate(30)"><path d="M0 -26 C8 -14 8 14 0 26 C-8 14 -8 -14 0 -26 Z" fill="#0b1226" stroke="#38BDF8" stroke-width="1.4"/>' +
+          '<path d="M0 26 l-6 13 6 -3 6 3 z" fill="#FB923C"/></g>' +
+          '<g fill="#94A3B8"><circle cx="62" cy="220" r="2.5"/></g>' +
+          '<text x="300" y="60" fill="#5E6E89" font-family="monospace" font-size="9">ORBIT</text>'; break;
+      case "finance":
+        body = '<g stroke="#5E6E89" stroke-width="1.3" fill="none"><path d="M42 34 v176 h316"/></g>' +
+          '<path d="M42 182 L104 150 L156 166 L214 112 L272 132 L346 70" fill="none" stroke="url(#g1)" stroke-width="2.4"/>' +
+          '<g stroke="#38BDF8" stroke-width="1"><line x1="104" y1="138" x2="104" y2="188"/><line x1="214" y1="100" x2="214" y2="150"/></g>' +
+          '<rect x="96" y="150" width="16" height="24" rx="2" fill="#38BDF8"/>' +
+          '<rect x="206" y="112" width="16" height="20" rx="2" fill="#FB923C"/>' +
+          '<circle cx="346" cy="70" r="3.4" fill="#FB923C"/>' +
+          '<g fill="#38BDF8"><circle cx="104" cy="150" r="2.6"/><circle cx="214" cy="112" r="2.6"/></g>'; break;
       default:
         body = '<path d="M150 40 Q100 125 150 210" fill="none" stroke="url(#gt)" stroke-width="2.4"/>';
     }
@@ -351,6 +376,51 @@
       lessons: "If you can't verify it against a reference, you can't trust it. Dependency-free ages well.",
       future: "Add transient & viscous-interaction tools; package as a teaching resource.",
       links: [{ t: "Live demo", u: "https://shoiabgoku.github.io/Aerothermodynamic-calculator/" }, { t: "Source", u: "https://github.com/ShoiabGoku/Aerothermodynamic-calculator" }]
+    },
+    {
+      tag: "Software · 3D / WebGL", status: "Live", live: true, cover: "flightsim",
+      title: "AETHERWING — 3D Flight Simulator",
+      summary: "A browser flight simulator: 7 aircraft, real cockpit systems & startup procedures, weather, day/night and a full glass cockpit — built in WebGL.",
+      chips: ["Three.js", "WebGL", "Flight dynamics", "Web Audio"],
+      overview: "A single-file, cinematic 3D flight simulator running entirely in the browser on Three.js / WebGL — seven aircraft from a Cessna 172 to Concorde and an F-16, each with its own flight model, exterior and cockpit.",
+      objective: "Recreate believable flight — from cold-and-dark startup to a graded landing — with real systems logic, not just an arcade model.",
+      method: ["Per-aircraft flight dynamics (Vr, V1, climb rate, ceiling, drag, afterburner).", "Per-type overhead systems + a guided startup director: battery → APU → bleed → fuel → engine start, order-enforced.", "Live glass cockpit — PFD, ND with course pointer and EICAS — drawn on canvas textures each frame.", "Weather (clear / rain / storm / fog) × time-of-day, 5 camera views, Web-Audio engine + spoken callouts."],
+      tools: ["Three.js r128", "WebGL", "Web Audio API", "SpeechSynthesis", "Vanilla JS"],
+      challenges: "Modelling interdependent aircraft systems (an engine won't start unless battery→APU→bleed→fuel happen in order) and rendering a live glass cockpit at frame rate.",
+      results: "A playable multi-aircraft simulator with cold-start procedures, offset-runway navigation, animated control surfaces, a virtual joystick and a touchdown-quality debrief.",
+      lessons: "Systems depth is what makes a sim feel real; a data-driven design (one config object per aircraft) keeps a ~1,500-line app maintainable.",
+      future: "More aircraft & airports, failure scenarios, and shared multiplayer skies.",
+      links: [{ t: "Live demo", u: "https://shoiabgoku.github.io/simulator-/" }, { t: "Source", u: "https://github.com/ShoiabGoku/simulator-" }]
+    },
+    {
+      tag: "Software · Physics Sim", status: "Live", live: true, cover: "rocketsim",
+      title: "Rocket Flight Lab — Ascent & Re-entry",
+      summary: "A physics-accurate rocket simulator: powered ascent, staging, orbit insertion, re-entry heating and parachute recovery.",
+      chips: ["Physics", "Orbital mechanics", "Sutton–Graves", "Canvas"],
+      overview: "A single-file rocket flight simulator built on real physics — inverse-square gravity, a hydrostatically-integrated atmosphere, Mach-dependent drag, and aerodynamic heating with ablation. Directly connected to my aerothermodynamics work.",
+      objective: "Let anyone design a vehicle and fly a full mission — launch, gravity-turn to orbit, deorbit and recovery — watching the real physics update live.",
+      method: ["Inverse-square gravity + a US-Std-validated atmosphere table (RK integration).", "Mach-dependent drag by nose shape; Sutton–Graves heating with PICA ablation limits.", "Two-stage vehicles + gravity-turn guidance and an orbit-insertion phase machine.", "Parachute recovery (drogue / main deploy gates) and procedural Web-Audio flight sound."],
+      tools: ["JavaScript", "Canvas 2D", "Web Audio API", "Numerical integration"],
+      challenges: "Keeping the orbital-mechanics integration stable near-vertical, and modelling re-entry heating & ablation without a full CFD solver.",
+      results: "Verified full missions — e.g. a 180 × 235 km orbit → deorbit → 7.3 km/s entry → parachute landing — all matching expected physics.",
+      lessons: "It ties my aerothermodynamics thesis to interactive code: Sutton–Graves heating and re-entry are the same physics, made playable.",
+      future: "3-DoF dynamics, more planets, and thermal-protection trade studies.",
+      links: [{ t: "Live demo", u: "https://shoiabgoku.github.io/rocket-science/" }, { t: "Source", u: "https://github.com/ShoiabGoku/rocket-science" }]
+    },
+    {
+      tag: "Software · Data / Web", status: "Live", live: true, cover: "finance",
+      title: "FinDeck — Finance Learning & Markets Hub",
+      summary: "A personal-finance dashboard: live markets, 10 learning modules, a 118-term glossary, calculators and a daily quiz.",
+      chips: ["JavaScript", "Live APIs", "localStorage", "Data viz"],
+      overview: "A self-contained finance learning platform and live-markets dashboard — built to teach myself finance, and usable by anyone starting out.",
+      objective: "Turn scattered finance concepts into one clean, always-on hub with real market data and structured, progressive learning.",
+      method: ["Live feeds — crypto (CoinGecko), forex and world indices — via resilient proxy fallbacks + localStorage caching.", "Ten progressive Learn modules with saved progress; a 118-term searchable glossary.", "Calculators (SIP, FD, lumpsum, EMI, inflation, goal) and a daily-rotating 30-question quiz.", "Everything cached & persisted locally — degrades to last-known values offline."],
+      tools: ["Vanilla JS", "Fetch / REST APIs", "localStorage", "HTML / CSS"],
+      challenges: "Making free market APIs reliable in the browser — CORS, rate limits and outages — solved with layered proxy fallbacks and cache-on-failure.",
+      results: "A live, deployed dashboard with resilient data, daily-fresh content and full offline persistence.",
+      lessons: "Robust engineering is mostly graceful failure — cache everything and degrade cleanly.",
+      future: "News headlines, FII / DII data, and portfolio tracking.",
+      links: [{ t: "Live demo", u: "https://shoiabgoku.github.io/investment/" }, { t: "Source", u: "https://github.com/ShoiabGoku/investment" }]
     },
     {
       tag: "B.Tech · Aero-Structural", status: "2024", live: false, cover: "aircraft",
