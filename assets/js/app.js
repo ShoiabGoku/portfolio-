@@ -591,6 +591,25 @@
     galEl.appendChild(el);
   });
 
+  /* ---------------------------------------------------------- CFD IMAGE LIGHTBOX */
+  var ibox = $("#imgbox"), ibImg = $("#ibImg"), ibCap = $("#ibCap");
+  if (ibox) {
+    function ibOpen(fig) {
+      var full = fig.getAttribute("data-full"); if (!full) return;
+      var im = $("img", fig), cap = $(".cfd-cap", fig);
+      ibImg.src = full; ibImg.alt = im ? im.alt : "";
+      ibCap.textContent = cap ? cap.textContent : "";
+      ibox.classList.add("open"); ibox.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden";
+    }
+    function ibClose() { ibox.classList.remove("open"); ibox.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; ibImg.src = ""; }
+    $$(".cfd-fig").forEach(function (fig) {
+      fig.addEventListener("click", function () { ibOpen(fig); });
+      fig.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ibOpen(fig); } });
+    });
+    $$("[data-ibclose]", ibox).forEach(function (el) { el.addEventListener("click", ibClose); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && ibox.classList.contains("open")) ibClose(); });
+  }
+
   /* ========================================================== HERO CAPSULE 3D */
   (function capsule() {
     var cv = $("#capsule"); if (!cv) return;

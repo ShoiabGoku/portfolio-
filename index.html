@@ -297,6 +297,26 @@
         <div class="chem"><div class="ct">q̇<sub>w</sub></div><div class="ck">Wall heat flux</div><div class="ctemp">model output</div></div>
       </div>
     </div>
+
+    <!-- CFD results gallery -->
+    <div class="cfd-results reveal d1">
+      <div class="cfd-head">
+        <div class="mono" style="font-size:12px;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;">CFD results · ANSYS Fluent 2024 R2</div>
+        <p style="color:var(--ink-soft);font-size:14.5px;margin-top:7px;max-width:74ch;">Hypersonic blunt-body simulations, walked from an ideal-gas baseline through real-gas turbulence models to a full <strong style="color:var(--ink)">five-species reacting-air</strong> model — capturing the bow shock, the ~14,800&nbsp;K stagnation field and the dissociation chemistry. Click any contour to enlarge.</p>
+      </div>
+      <div class="cfd-grid">
+        <figure class="cfd-fig" data-full="assets/mtp/01-ideal-gas-mach.png" tabindex="0" role="button" aria-label="Enlarge: ideal-gas laminar Mach contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/01-ideal-gas-mach.png" alt="Ideal-gas laminar Mach number contour over a blunt body"></div><figcaption class="cfd-cap"><b>Ideal gas · laminar</b>Mach number — baseline model</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/02-real-gas-laminar.png" tabindex="0" role="button" aria-label="Enlarge: real-gas laminar contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/02-real-gas-laminar.png" alt="Real-gas laminar contour"></div><figcaption class="cfd-cap"><b>Real gas · laminar</b>Real-gas thermodynamics</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/03-real-gas-sst-komega.png" tabindex="0" role="button" aria-label="Enlarge: real-gas SST k-omega contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/03-real-gas-sst-komega.png" alt="Real-gas SST k-omega turbulence model contour"></div><figcaption class="cfd-cap"><b>Real gas · SST k-ω</b>Turbulence-model comparison</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/04-5sp-mach.png" tabindex="0" role="button" aria-label="Enlarge: five-species Mach contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/04-5sp-mach.png" alt="Five-species Mach number contour showing the bow shock"></div><figcaption class="cfd-cap"><b>Five-species · Mach</b>Bow shock &amp; shock layer</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/05-5sp-temperature.png" tabindex="0" role="button" aria-label="Enlarge: five-species static temperature contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/05-5sp-temperature.png" alt="Five-species static temperature contour, peak near 14800 K"></div><figcaption class="cfd-cap"><b>Five-species · Temperature</b>Stagnation peak ≈ 14,800 K</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/06-5sp-o2.png" tabindex="0" role="button" aria-label="Enlarge: oxygen mass fraction contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/06-5sp-o2.png" alt="Mass fraction of molecular oxygen O2"></div><figcaption class="cfd-cap"><b>O₂ mass fraction</b>Molecular oxygen (reactant)</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/07-5sp-n2.png" tabindex="0" role="button" aria-label="Enlarge: nitrogen mass fraction contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/07-5sp-n2.png" alt="Mass fraction of molecular nitrogen N2"></div><figcaption class="cfd-cap"><b>N₂ mass fraction</b>Molecular nitrogen (reactant)</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/08-5sp-atomic-o.png" tabindex="0" role="button" aria-label="Enlarge: atomic oxygen mass fraction contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/08-5sp-atomic-o.png" alt="Mass fraction of atomic oxygen O"></div><figcaption class="cfd-cap"><b>Atomic O</b>O₂ dissociation product</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/09-5sp-atomic-n.png" tabindex="0" role="button" aria-label="Enlarge: atomic nitrogen mass fraction contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/09-5sp-atomic-n.png" alt="Mass fraction of atomic nitrogen N"></div><figcaption class="cfd-cap"><b>Atomic N</b>N₂ dissociation product</figcaption></figure>
+        <figure class="cfd-fig" data-full="assets/mtp/10-5sp-no.png" tabindex="0" role="button" aria-label="Enlarge: nitric oxide mass fraction contour"><div class="imgwrap"><img loading="lazy" src="assets/mtp/10-5sp-no.png" alt="Mass fraction of nitric oxide NO"></div><figcaption class="cfd-cap"><b>Nitric oxide (NO)</b>Formed by exchange reactions</figcaption></figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -452,6 +472,16 @@
     <button class="modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     <div class="modal-body" id="modalBody"></div>
   </div>
+</div>
+
+<!-- image lightbox (CFD gallery) -->
+<div id="imgbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="ib-bg" data-ibclose></div>
+  <figure>
+    <button class="ib-close" data-ibclose aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <img id="ibImg" src="" alt="" />
+    <figcaption id="ibCap"></figcaption>
+  </figure>
 </div>
 
 <script src="assets/js/app.js"></script>

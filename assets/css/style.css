@@ -327,6 +327,30 @@ ul{ list-style:none; }
 .chem .ck{ font-size:11px; color:var(--ink-mid); margin-top:6px; }
 .chem .ctemp{ font-family:var(--font-mono); font-size:10px; color:var(--orange); margin-top:8px; letter-spacing:.04em; }
 
+/* CFD results gallery */
+.cfd-results{ margin-top:30px; }
+.cfd-results .cfd-head{ margin-bottom:16px; }
+.cfd-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(212px,1fr)); gap:14px; }
+.cfd-fig{ margin:0; border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; background:var(--bg-1); cursor:zoom-in; transition:.28s var(--ease); }
+.cfd-fig:hover{ transform:translateY(-3px); border-color:var(--line-2); box-shadow:var(--shadow-sm); }
+.cfd-fig:focus-visible{ border-color:var(--cyan); }
+.cfd-fig .imgwrap{ aspect-ratio:16/10; overflow:hidden; background:#0a1024; }
+.cfd-fig img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s var(--ease); }
+.cfd-fig:hover img{ transform:scale(1.05); }
+.cfd-cap{ padding:11px 13px; font-family:var(--font-mono); font-size:11.5px; color:var(--ink-soft); line-height:1.45; }
+.cfd-cap b{ color:var(--cyan); font-weight:500; display:block; margin-bottom:3px; }
+
+/* image lightbox */
+#imgbox{ position:fixed; inset:0; z-index:160; display:grid; place-items:center; padding:26px; opacity:0; visibility:hidden; transition:opacity .3s var(--ease), visibility .3s; }
+#imgbox.open{ opacity:1; visibility:visible; }
+#imgbox .ib-bg{ position:absolute; inset:0; background:rgba(2,4,12,.87); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
+#imgbox figure{ position:relative; max-width:min(1120px,94vw); margin:0; text-align:center; }
+#imgbox img{ max-width:100%; max-height:80vh; border-radius:12px; border:1px solid var(--line-2); box-shadow:var(--shadow); background:#0a1024; }
+#imgbox figcaption{ margin-top:14px; font-family:var(--font-mono); font-size:13px; color:var(--ink-soft); letter-spacing:.02em; }
+#imgbox .ib-close{ position:absolute; top:-16px; right:-16px; width:42px; height:42px; border-radius:50%; border:1px solid var(--line-2); background:var(--bg-1); display:grid; place-items:center; color:var(--ink); }
+#imgbox .ib-close svg{ width:18px; height:18px; }
+#imgbox .ib-close:hover{ border-color:var(--cyan); color:var(--cyan); }
+
 /* ---------------------------------------------------------------- RESEARCH */
 .res-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
 .res-card{ border:1px solid var(--line); border-radius:var(--radius); background:var(--glass); padding:26px 24px; transition:.3s var(--ease); }
