@@ -2,7 +2,7 @@
 
 A premium, dark-mode personal portfolio for an **M.Tech Aerospace Engineering** student at **IIT Bombay**, focused on hypersonics, aerothermodynamics, heat transfer and CFD.
 
-**Live (once Pages is enabled):** `https://shoiabgoku.github.io/portfolio/`
+**Live (once Pages is enabled):** `https://shoiabgoku.github.io/portfolio-/`
 
 Hand-built, framework-free, fast. A hand-rolled canvas **3D wireframe re-entry capsule**, particle field, animated **skills radar**, and click-through **project case studies** — no Three.js, no React, no build step.
 
@@ -47,13 +47,12 @@ Hand-built, framework-free, fast. A hand-rolled canvas **3D wireframe re-entry c
 ├─ Marquee ........ focus-area ticker
 ├─ About ......... story, why aerospace, vision, trajectory timeline
 ├─ Skills ........ 7-domain radar + capability cards
-├─ Projects ...... 6 cards → modal case studies
-├─ Thesis ........ dedicated: motivation→method→chemistry, diagrams
-├─ Research ...... interests, current, future, collab, publications, posters
+├─ Projects ...... 14 cards → modal case studies
+├─ Thesis ........ motivation→method→chemistry + real CFD results gallery
+├─ Research ...... interests, current, future, collabs, publication, talks
 ├─ Experience .... research/lab/leadership/sports/hostel/volunteer timeline
 ├─ Achievements .. awards/scholarships/competitions/… cards
-├─ Gallery ....... lab/CFD/wind-tunnel/campus tiles
-├─ Contact ....... email, GitHub, LinkedIn, Scholar, ResearchGate, résumé
+├─ Contact ....... email, GitHub, LinkedIn, publication DOI, live tools, résumé
 └─ Footer
 ```
 
@@ -63,7 +62,7 @@ Hand-built, framework-free, fast. A hand-rolled canvas **3D wireframe re-entry c
 Land → read hero value prop → [primary] View Research ─┐
                               [secondary] Projects ───┼→ open case-study modal → email / résumé
                               [tertiary] Résumé / Contact ─┘
-Scroll path: About → Skills → Projects → Thesis → Research → Experience → Achievements → Gallery → Contact
+Scroll path: About → Skills → Projects → Thesis → Research → Experience → Achievements → Contact
 Nav + scroll-spy let users jump directly; mobile collapses to a slide-in menu.
 ```
 
@@ -94,7 +93,7 @@ Headings use a fluid `clamp()` scale; line-height 1.65 for body comfort.
 
 ## 7 · Component library
 
-Defined in [`assets/css/style.css`](assets/css/style.css): buttons (`.btn`, `.btn-primary/ghost/amber`, `.magnetic`), glass panels (`.glass`), nav + scroll-spy, eyebrows/section heads, timelines (`.tl`, `.xp`), skill radar + cards (`.pips`), project cards + modal, thesis band + SVG diagrams, chemistry ladder, research/achievement cards, gallery tiles, contact links, footer, reveal utilities (`.reveal .d1–.d6`).
+Defined in [`assets/css/style.css`](assets/css/style.css): buttons (`.btn`, `.btn-primary/ghost/amber`, `.magnetic`), glass panels (`.glass`), nav + scroll-spy, eyebrows/section heads, timelines (`.tl`, `.xp`), skill radar + cards (`.pips`), project cards + modal, thesis band + SVG diagrams, chemistry ladder, research/achievement cards, CFD gallery + lightbox, contact links, footer, reveal utilities (`.reveal .d1–.d6`).
 
 ## 8 · Responsive layouts
 
@@ -109,7 +108,7 @@ This repo **is** the site (no build step).
 1. Push to GitHub (already done if you're reading this on GitHub).
 2. **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `root` → Save.**
    *(GitHub Pages can't be toggled programmatically — this one-time step is yours.)*
-3. Wait ~1–2 min; the site is live at `https://shoiabgoku.github.io/portfolio/`.
+3. Wait ~1–2 min; the site is live at `https://shoiabgoku.github.io/portfolio-/`.
 
 `.nojekyll` is included so asset paths are served verbatim.
 
@@ -128,18 +127,21 @@ Done (real data from résumé + publication):
 - [x] **B.Tech projects** — Gulfstream G650 design, high-compression fuel injector, model rocket.
 - [x] **Languages** — English, Hindi, Ladakhi, Urdu, Arabic.
 
-Still to add:
-- [ ] **LinkedIn / Google Scholar / ResearchGate** exact URLs — Contact section (placeholders).
-- [ ] **Gallery** — real images into `assets/gallery/` (SVG placeholders for now).
+- [x] **CFD results** — 10 real ANSYS Fluent contours in the Thesis section (`assets/mtp/`), click-to-enlarge.
+- [x] **LinkedIn** — real profile URL wired in.
+- [x] **Zero placeholders** — every section now shows real content only (the fake photo gallery was removed rather than shipped with dummy tiles).
+
+Optional future additions:
+- [ ] **Google Scholar / ResearchGate** — create the profiles, then add links (Contact currently links the Elsevier DOI instead).
+- [ ] **Real photos** (lab / wind tunnel / campus) — if added, a photo gallery section can be rebuilt.
 - [ ] **Posters / talks** — add as they appear.
 
-> Nothing fabricated: every credential above is drawn from the author's own résumé and published chapter. Remaining items are clearly-marked placeholders.
+> Nothing fabricated: every credential is drawn from the author's own résumé, published chapter and CFD work.
 
 ---
 
 ## 11 · Future improvements
 
-- Real OG/Twitter share image (`assets/og.png`) for link previews.
 - Optional Next.js + TypeScript migration if a CMS/blog is wanted.
 - Interactive thesis figures (live shock-standoff / heat-flux plots from the calculator engine).
 - Light-mode variant; i18n (the author speaks 5 languages).
@@ -156,8 +158,10 @@ portfolio/
 ├─ assets/
 │  ├─ css/style.css        # design system + components
 │  ├─ js/app.js            # interactions, 3D capsule, radar, modals
+│  ├─ mtp/                 # ✓ CFD result contours (WebP)
 │  ├─ publications/        # ✓ Elsevier chapter PDF
-│  └─ gallery/             # ← add images (SVG placeholders for now)
+│  ├─ reports/             # ✓ cryogenics report PDF
+│  └─ og.png               # ✓ social share card
 ├─ .nojekyll
 └─ README.md
 ```

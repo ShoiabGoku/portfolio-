@@ -563,34 +563,6 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
   }
 
-  /* ---------------------------------------------------------- GALLERY */
-  var GAL = [
-    { cls: "big", cap: "<b>CFD</b> · Hypersonic blunt-body shock layer", k: "cfd" },
-    { cls: "tall", cap: "<b>Lab</b> · Shock-tunnel instrumentation", k: "tunnel" },
-    { cls: "", cap: "<b>Mesh</b> · Boundary-layer grid", k: "mesh" },
-    { cls: "wide", cap: "<b>Campus</b> · IIT Bombay", k: "campus" },
-    { cls: "", cap: "<b>Talk</b> · Research presentation", k: "present" },
-    { cls: "", cap: "<b>Wind tunnel</b> · Test section", k: "wt" },
-    { cls: "wide", cap: "<b>Conference</b> · Poster session", k: "conf" }
-  ];
-  function galSvg(k) {
-    var d = '<defs><linearGradient id="ga" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0b1226"/><stop offset="1" stop-color="#070b1d"/></linearGradient></defs><rect width="400" height="300" fill="url(#ga)"/>';
-    var g = '<g stroke="rgba(56,189,248,.18)" stroke-width="1" fill="none">';
-    if (k === "cfd" || k === "mesh") { for (var i = 0; i < 12; i++) g += '<path d="M' + (i * 36) + ' 0 q-10 150 0 300"/>'; for (var j = 0; j < 9; j++) g += '<path d="M0 ' + (j * 38) + ' h400"/>'; }
-    else if (k === "tunnel" || k === "wt") { g += '<rect x="60" y="120" width="280" height="60" rx="6"/><path d="M120 150h160" stroke="#FB923C"/><circle cx="200" cy="150" r="26"/>'; }
-    else if (k === "campus") { g += '<path d="M40 220h320M80 220v-80h60v80M170 220v-110h70v110M270 220v-70h60v70"/>'; }
-    else if (k === "present" || k === "conf") { g += '<rect x="90" y="70" width="220" height="130" rx="6"/><path d="M120 110h160M120 140h120M120 165h140"/>'; }
-    g += '</g>';
-    return '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">' + d + g + '</svg>';
-  }
-  var galEl = $("#gal");
-  if (galEl) GAL.forEach(function (t) {
-    var el = document.createElement("div");
-    el.className = "tile " + t.cls;
-    el.innerHTML = galSvg(t.k) + '<div class="cap">' + t.cap + '</div>';
-    galEl.appendChild(el);
-  });
-
   /* ---------------------------------------------------------- CFD IMAGE LIGHTBOX */
   var ibox = $("#imgbox"), ibImg = $("#ibImg"), ibCap = $("#ibCap");
   if (ibox) {
